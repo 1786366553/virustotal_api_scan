@@ -54,7 +54,7 @@ def virustotal_main():
         id = row[0]
         api_dict = api_use(url, list_api_key[key_count])
         key_count = key_count + 1
-        if key_count > 7:
+        if key_count > 14:
             key_count = 0
         if api_dict == 0:
             sql = "update phishing_domain set id_count= 1 WHERE id = "+str(id)
